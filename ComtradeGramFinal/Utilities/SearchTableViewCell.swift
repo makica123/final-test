@@ -10,53 +10,38 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
     
+    //MARK: Outlets
     
     @IBOutlet weak var usernameLbl: UILabel!
-    
     @IBOutlet weak var commentsBtn: UIButton!
-    
     @IBOutlet weak var numberOfLikesLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var locationBtn: UIButton!
-    
     @IBOutlet weak var likeBtn: UIButton!
-    
-    
     @IBOutlet weak var addFriendBtn: UIButton!
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var numberOfCommentsLbl: UILabel!
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-    
-    @IBOutlet weak var postImage: UIImageView!
-    
-    @IBOutlet weak var numberOfCommentsLbl: UILabel!
+        
+        layer.cornerRadius = 15
+        layer.borderWidth = 6
+        layer.borderColor = UIColor.init(red:204/255.0, green:21/255.0, blue:34/255.0, alpha: 1.0).cgColor
+        }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
 
-    @IBAction func findLocation(_ sender: Any) {
-        print ("Find user location")
-    }
+   
     
-    @IBAction func addFriend(_ sender: Any) {
-        
-        print ("Add me")
-    }
-    
-    @IBAction func likeMe(_ sender: UIButton) {
-        
-        let isLiked = sender.isSelected
-        sender.isSelected = !isLiked
-        // call api, here you are POST ID and new status
-        let newStatus = !isLiked // :: sender.isSelected
-    }
-    @IBAction func commentMe(_ sender: Any) {
-        
-        print ("Write a comment")
-    }
+
 }
