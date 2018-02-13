@@ -11,7 +11,7 @@
 		071CE99F2025C79F00BEEAAD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CE99E2025C79F00BEEAAD /* MapViewController.swift */; };
 		071CE9A12025C7B300BEEAAD /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CE9A02025C7B300BEEAAD /* FriendsViewController.swift */; };
 		071CE9A32025C7C600BEEAAD /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CE9A22025C7C600BEEAAD /* CommentsViewController.swift */; };
-		071CE9A52025C7D700BEEAAD /* SearchViewController copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CE9A42025C7D700BEEAAD /* SearchViewController copy.swift */; };
+		071CE9A52025C7D700BEEAAD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CE9A42025C7D700BEEAAD /* SearchViewController.swift */; };
 		071CE9A72025D47400BEEAAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CE9A62025D47400BEEAAD /* SettingsViewController.swift */; };
 		071E5FD92018F667001B8FE6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E5FD82018F667001B8FE6 /* LoginViewController.swift */; };
 		073C19462006891100F7816E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C19452006891100F7816E /* AppDelegate.swift */; };
@@ -51,7 +51,7 @@
 		071CE99E2025C79F00BEEAAD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		071CE9A02025C7B300BEEAAD /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		071CE9A22025C7C600BEEAAD /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
-		071CE9A42025C7D700BEEAAD /* SearchViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController copy.swift"; sourceTree = "<group>"; };
+		071CE9A42025C7D700BEEAAD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		071CE9A62025D47400BEEAAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		071E5FD82018F667001B8FE6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		073C19422006891100F7816E /* ComtradeGramFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComtradeGramFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +115,7 @@
 				071CE99C2025C78500BEEAAD /* ProfileViewController.swift */,
 				071CE9A02025C7B300BEEAAD /* FriendsViewController.swift */,
 				071CE9A22025C7C600BEEAAD /* CommentsViewController.swift */,
-				071CE9A42025C7D700BEEAAD /* SearchViewController copy.swift */,
+				071CE9A42025C7D700BEEAAD /* SearchViewController.swift */,
 				071E5FD82018F667001B8FE6 /* LoginViewController.swift */,
 				071CE99E2025C79F00BEEAAD /* MapViewController.swift */,
 				071CE9A62025D47400BEEAAD /* SettingsViewController.swift */,
@@ -511,7 +511,7 @@
 				073C194E2006891100F7816E /* ComtradeGramFinal.xcdatamodeld in Sources */,
 				071CE99D2025C78600BEEAAD /* ProfileViewController.swift in Sources */,
 				071CE99F2025C79F00BEEAAD /* MapViewController.swift in Sources */,
-				071CE9A52025C7D700BEEAAD /* SearchViewController copy.swift in Sources */,
+				071CE9A52025C7D700BEEAAD /* SearchViewController.swift in Sources */,
 				073C19462006891100F7816E /* AppDelegate.swift in Sources */,
 				071CE9A72025D47400BEEAAD /* SettingsViewController.swift in Sources */,
 				C1CD144220271DDE001CF7C8 /* SearchTableViewCell.swift in Sources */,

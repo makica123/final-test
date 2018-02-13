@@ -23,10 +23,6 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var numberOfCommentsLbl: UILabel!
     
-    
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

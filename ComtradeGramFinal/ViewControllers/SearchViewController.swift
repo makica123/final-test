@@ -66,6 +66,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.usernameLbl.text = post.user.username
         
+        //MARK: Number of likes
+        
+        cell.numberOfLikesLbl.text = (post.likes.count) == 1 ? "\(post.likes.count) like" : "\(post.likes.count) likes"
+        
+        //MARK: Number of comments
+        
+        cell.numberOfCommentsLbl.text =
+            (post.comments.count) == 1 ?
+                "\(post.comments.count) comment" : "\(post.comments.count) comments"
+        
+        
         //Mark: Location
         
         cell.locationLbl.text = post.location?.name
@@ -73,10 +84,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if cell.locationLbl.text == nil {
             cell.locationBtn.isHidden = true
         }
-        
-        //MARK: Number of Likes
-        
-        cell.numberOfLikesLbl.text = (post.likes.count) == 1 ? "\(post.likes.count) like" : "\(post.likes.count) likes"
         
         //MARK: Post Image
         
@@ -92,7 +99,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar .resignFirstResponder()
-        
         self.searchTags()
     }
     
@@ -100,15 +106,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func loadPosts() {
         
-        Instagram.shared.recentMedia(fromUser: "self", count: 10, success: { mediaList in
-            
-            self.instagramPosts = mediaList
-            self.tableView.reloadData()
-            
-            return
-        }, failure: { error in
-            print(error.localizedDescription)
-        })
+        DispatchQueue.global(qos: .utility).async {
+            Instagram.shared.recentMedia(fromUser: "self", count: 10, success: { mediaList in
+                DispatchQueue.main.async {
+                    
+                    self.instagramPosts = mediaList
+                    self.tableView.reloadData()
+                }
+                return
+                
+            }, failure: { error in
+                print(error.localizedDescription)
+                
+            })
+        }
     }
     
     //MARK: Search Hashtags function
@@ -128,17 +139,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     let alert = UIAlertController(title: "No posts", message: "There is no post with given tag ", preferredStyle: .alert)
                     
                     //We add buttons to the alert controller by creating UIAlertActions:
-                    let actionOk = UIAlertAction(title:"ok" ,style: .default, handler: nil)
-                    //
-                    alert.addAction(actionOk)
                     
+                    let actionOk = UIAlertAction(title:"ok" ,style: .default, handler: nil)
+                    
+                    alert.addAction(actionOk)
                     
                     self.present(alert, animated: true, completion: nil)
                 }
-                else {
-                    
-                    self.searchTags()
-                }
+                
                 return
                 
         },failure: { error in
@@ -151,22 +159,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func findLocation(_ sender: Any) {
         
-//        print ("Find location")
+        //        print ("Find location")
     }
     
     @IBAction func addFrined(_ sender: Any) {
         
-//        print ("Add me")
-    }
-    
-    @IBAction func likeMe(_ sender: UIButton) {
-        
-        let isLiked = sender.isSelected
-        sender.isSelected = !isLiked
-        _ = !isLiked
+        //        print ("Add me")
     }
     
     @IBAction func commentMe(_ sender: Any) {
+        
+        print("Comment me")
     }
     
     @IBAction func realoadPosts(_ sender: Any) {

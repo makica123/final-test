@@ -388,7 +388,7 @@
                     <navigationItem key="navigationItem" id="V9g-T3-n3b"/>
                     <connections>
                         <segue destination="gqx-pr-nPk" kind="show" identifier="openMap" id="fMh-YT-cuL"/>
-                        <segue destination="Frg-Sp-00v" kind="modal" identifier="openLogin" modalTransitionStyle="crossDissolve" id="cjN-ik-A2a"/>
+                        <segue destination="Frg-Sp-00v" kind="presentation" identifier="openLogin" id="cjN-ik-A2a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jU6-XE-rdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -486,7 +486,7 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HsF-V1-hlW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discover" image="favorites" id="Gow-Wh-XN5"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorites" id="Gow-Wh-XN5"/>
                     <navigationItem key="navigationItem" title="DISCOVER" largeTitleDisplayMode="always" id="3dX-cN-MKd" propertyAccessControl="localizable">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="BCk" id="aER-2w-oAc">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
